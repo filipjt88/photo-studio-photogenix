@@ -1,0 +1,668 @@
+@import url('https://fonts.googleapis.com/css?family=Quantico:400,700|Roboto:300,400&display=swap');
+:root {
+    --crna: #1e1e1e;  /* rgba(30, 30, 30, .9) */
+    --zelena: #78bc62; /* rgb(120, 188, 98) */
+    --zuta: #ffd944;   /* rgb(255, 217, 68) */
+    --siva: #102438;
+    --svetloSiva: #f4f4f4;
+    --bela: #fff;
+    --padding: 100px 0;
+    --headings: 3rem;
+    --fontSize: 16px;
+    --transition: .3s ease;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto',sans-serif;
+    font-size: var(--fontSize);
+    line-height: 1.6;
+    color: var(--siva);
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Quantico',sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    transition: var(--transition);
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    font-size: 1.1rem;
+    font-family: 'Quantico',sans-serif;
+    text-transform: uppercase;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.container {
+    width: 70%;
+    margin: auto;
+}
+
+button:hover {
+    transition: var(--transition);
+}
+
+
+/**********************
+Grid sistem
+**********************/
+.row {
+    width: 100%;
+}
+
+.row::after {
+    display: block;
+    content: ""; 
+    clear: both;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+.col-pet {width: 20%;}
+
+[class*="col-"] {
+    float: left;
+}
+
+@media(max-width: 767px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+
+/**********************
+End of grid sistem
+**********************/
+
+/**********************
+NAv
+**********************/
+nav {
+    height: 80px;
+    line-height: 80px;
+}
+
+nav .logo {
+    float: left;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    font-family: 'Quantico',sans-serif;
+    color: var(--crna);
+    padding-left: 100px;
+}
+
+nav ul {
+    float: right;
+}
+
+nav ul li {
+    display: inline-block;
+    transition: var(--transition);
+    border-bottom: 3px solid transparent;
+    position: relative;
+    top: -3px;
+}
+
+nav i {
+    color: var(--zelena);
+}
+
+nav ul li a {
+    padding: 0 30px;
+    color: var(--crna);
+}
+
+.active {
+    border-bottom: 3px solid var(--zelena);
+    position: relative;
+    top: -3px;
+}
+
+nav ul li:hover {
+    border-bottom: 3px solid var(--zelena);
+    position: relative;
+    top: -3px;
+}
+
+/**********************
+Footer
+**********************/
+footer {
+    background: var(--crna);
+    padding: var(--padding);
+    color: var(--bela);
+}
+
+footer ul li {
+    list-style: none;
+}
+
+footer .col-3 {
+    padding: 10px;
+}
+
+footer img {
+    width: 20%;
+}
+
+footer a {
+    color: var(--svetloSiva);
+    margin-right: 10px;
+}
+
+footer i {
+    color: var(--zelena);
+    transition: var(--transition);
+}
+
+footer i:hover {
+    color: var(--zuta);
+}
+
+footer h4 {
+    font-size: 1.5rem;
+    padding-bottom: 30px;
+}
+
+footer input {
+    padding: 15px;
+    border: 2px solid var(--zelena);
+    background: var(--crna);
+    width: 150px;
+}
+
+footer ::placeholder {
+    color: var(--svetloSiva);
+    font-size: 1rem;
+}
+
+footer button {
+    background: var(--zelena);
+    transition: var(--transition);
+    border: 2px solid var(--zelena);
+    position: relative;
+    left: -5px;
+    top: 1px;
+}
+
+footer button i {
+     color: var(--crna);
+}
+
+footer button i:hover {
+    color: var(--bela);
+}
+
+footer p {
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+
+/**********************
+End of Footer
+**********************/
+
+/**********************
+End of NAv
+**********************/
+
+/*************************************
+H O M E
+*************************************/
+header {
+    background:linear-gradient(rgba(30,30,30,.5),rgba(30,30,30,.5)),url(img/header.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 100px 20px 200px 20px;
+    text-align: right;
+    color: var(--bela);
+}
+
+header h1 {
+    font-size: 8rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+header button {
+   background: var(--zuta);
+}
+
+header button:hover {
+    background: var(--zelena);
+}
+
+/**********************
+Services
+**********************/
+.services img {
+    width: 100%;
+}
+
+.services .wrapper {
+    box-shadow: 0 0 25px lightgray;
+    margin: -110px 20px 20px 20px;
+    border: 20px solid var(--bela);
+    transition: var(--transition);
+    padding: 20px;
+    background: var(--bela);
+}
+
+.services .wrapper:hover {
+    box-shadow: 0 0 25px gray;
+}
+
+.services .text {
+    text-align: center;
+    padding: 20px;
+}
+
+.services .text h3 {
+    font-size: 2rem;
+}
+
+.services .text h3::after {
+    display: block;
+    content: "";
+    margin: 30px auto;
+    height: 3px;
+    width: 60%;
+    background: lightgray;
+}
+
+/**********************
+Works
+**********************/
+
+.works {
+    padding: var(--padding);
+    text-align: center;
+}
+
+
+.works1 {
+    background-image: url(img/works1.jpg);
+    height: 50vh;
+    background-size: cover;
+}
+
+.works1:hover {
+    opacity: .8;
+    transition: var(--transition);
+}
+
+.works2 {
+    background-image: url(img/works2.jpg);
+    height: 50vh;
+    background-size: cover;
+}
+
+.works2:hover {
+    opacity: .8;
+    transition: var(--transition);
+}
+
+.works3 {
+    background-image: url(img/works3.jpg);
+    height: 100vh;
+    background-size: cover;
+}
+
+.works3:hover {
+    opacity: .8;
+    transition: var(--transition);
+}
+
+.works4 {
+    background-image: url(img/works4.jpg);
+    height: 50vh;
+    background-size: cover;
+}
+
+.works4:hover {
+    opacity: .8;
+    transition: var(--transition);
+}
+
+.works5 {
+    background-image: url(img/works5.jpg);
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.works5:hover {
+    opacity: .8;
+    transition: var(--transition);
+}
+
+.works6 {
+    background-image: url(img/works6.jpg);
+    height: 50vh;
+    background-size: cover;
+}
+
+.works6:hover {
+    opacity: .8;
+    transition: var(--transition);
+}
+
+/**********************
+A B O U T
+**********************/
+.about {
+    background-image: url(img/about1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.about .col-6:first-child {
+    background: var(--svetloSiva);
+    padding: 80px;
+}
+
+.about .col-6:first-child .row {
+    padding-bottom: 40px;
+    padding-left: 100px;
+}
+
+.about .col-6:first-child .row::before {
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f007";
+    color: var(--zelena);
+    background: var(--bela);
+    font-size: 2rem;
+    padding: 20px;
+    position: relative;
+    top: 65px;
+    left: -100px;
+  }
+
+.about h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+/**********************
+Team
+**********************/
+.team {
+    text-align: center;
+    padding: var(--padding);
+}
+
+.team img {
+    width: 100%;
+    display: block;
+}
+
+.team h2 + p {
+    padding-bottom: 40px;
+}
+
+.team .col-3 {
+   padding: 30px;
+}
+
+.team .description {
+    background: var(--svetloSiva);
+    padding: 20px;
+}
+
+.team .description h4 {
+     font-size: 1.5rem;
+}
+
+.team .description p {
+    color: var(--zelena);
+}
+
+.team i {
+    color: gray;
+    margin: 10px;
+    transition: var(--transition);
+}
+
+.team i:hover {
+    color: var(--zelena);
+}
+
+/**********************
+Promote
+**********************/
+.promote {
+    background-image:linear-gradient(rgba(120,188,98, .8),rgba(120,188,98, .8)),url(img/promote.jpg);
+    background-position: top;
+    background-size: cover;
+    padding: 150px 0;
+    text-align: center;
+    color: var(--bela);
+}
+
+.promote button {
+    background: var(--crna);
+    color: var(--bela);
+}
+
+.promote button:hover {
+    background: var(--bela);
+    color: var(--crna);
+}
+
+/**********************
+Testimonials
+**********************/
+.testimonials {
+    padding: var(--padding);
+}
+
+.testimonials img {
+    width: 40%;
+    float: left;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+
+.testimonials .hgroup {
+    float: right;
+    text-align: right;
+    padding-top: 40px;
+    padding-right: 80px;
+}
+
+.testimonials h2 {
+    text-align: center;
+}
+
+.testimonials h2 + p {
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.testimonials .col-4::before {
+    content: "";
+    display: block;
+    height: 4px;
+    background: var(--svetloSiva);
+    margin-bottom: 20px;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.testimonials .col-4 {
+    padding: 30px;
+}
+
+.testimonials h3 {
+    font-size: 1.3rem;
+}
+
+.testimonials .hgroup p {
+    color: var(--zelena);
+}
+
+
+/**********************
+P R I C I N G
+**********************/
+.pricing {
+    padding: var(--padding);
+    text-align: center;
+}
+
+.pricing ul {
+    list-style: none;
+}
+
+.pricing .wrapper {
+    margin: 30px;
+    box-shadow: 0 0 25px lightgray;
+    padding: 30px;
+    transition: var(--transition);
+}
+
+.pricing .wrapper:hover {
+    box-shadow: 0 0 25px gray;
+}
+
+.pricing ul li {
+    line-height: 2.5;
+}
+
+.pricing button {
+    background: var(--zelena);
+}
+
+.pricing button:hover {
+    background: var(--crna);
+    color: var(--bela);
+}
+
+.pricing h3::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 60%;
+    background:lightgray;
+    margin: 30px auto;
+}
+
+
+/**********************
+C O N T A C T
+**********************/
+.contact {
+   padding: var(--padding);
+}
+
+.contact i {
+    font-size: 2.8rem;
+    color: var(--zelena);
+    margin-top: 10px;
+}
+
+.contact h2 + p {
+    padding-bottom: 30px;
+}
+
+.contact h5 {
+    font-size: 1.5rem;
+}
+
+.contact form input, textarea {
+    width: 100%;
+    border: 1px solid var(--zelena);
+    border-radius: 2px;
+}
+
+.contact form input {
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.contact::placeholder {
+    color: var(--svetloSiva);
+}
+
+.contact input:focus, .contact textarea:focus {
+    background: var(--zuta);
+}
+
+.contact button {
+    background: var(--zelena);
+}
+
+.contact button:hover {
+    background: var(--zuta);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
